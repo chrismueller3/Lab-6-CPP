@@ -8,7 +8,7 @@
 #include "GasolineVehicle.h"
 #include "ElectricVehicle.h"
 
-class HybridVehicle : public GasolineVehicle, public ElectricVehicle , virtual public Vehicle {
+class HybridVehicle : public GasolineVehicle, public ElectricVehicle{
 
     float currentCharge, maximumCharge, currentGasoline, maximumGasoline, engineEfficiencyElectric, engineEfficiencyGas;
 public:
