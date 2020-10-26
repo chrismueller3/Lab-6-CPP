@@ -8,7 +8,12 @@
 #include "Vehicle.h"
 
 class ElectricVehicle : public Vehicle {
-
+    float currentCharge, maximumCharge;
+public:
+    virtual float calculateRange() override;
+    virtual float percentEnergyRemaining() override;
+    virtual void drive(float km) override;
+    ElectricVehicle(float gasSize, float efficiency);
 };
 
 

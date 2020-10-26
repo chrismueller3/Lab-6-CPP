@@ -59,38 +59,6 @@ using namespace std;
         }
     }
 
-//    //For Vehicle++
-//    Vehicle Vehicle :: operator++() {
-//        numDoors++;
-//        numWheels++;
-//        return Vehicle(this);
-//    }
-//    //For ++Vehicle
-//    Vehicle Vehicle :: operator++(int i) {
-//        Vehicle temp(this);
-//        numDoors++;
-//        numWheels++;
-//        return temp;
-//    }
-//
-//    //For Vehicle--
-//    Vehicle Vehicle :: operator--() {
-//        numDoors--;
-//        numWheels--;
-//        return Vehicle(this);
-//    }
-//    //For --Vehicle
-//    Vehicle Vehicle :: operator--(int i) {
-//        Vehicle temp(this);
-//        numDoors--;
-//        numWheels--;
-//        return temp;
-//    }
-
-   /* ostream& Vehicle :: operator<<(ostream& const out, const Vehicle& v) {
-
-    }*/
-
     ostream& operator<<(ostream& out, const Vehicle& v) {
          out << "Number of doors: " << v.numDoors << endl
          << "Number of wheels: " << v.numWheels << endl;

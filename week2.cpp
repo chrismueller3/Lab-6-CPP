@@ -4,6 +4,7 @@
 #include<iostream>
 #include "Vehicle.h"
 #include "GasolineVehicle.h"
+#include "ElectricVehicle.h"
 
 using namespace std;
 
@@ -27,7 +28,7 @@ int main(int argc, char **argv)
 //    delete testVehicle(  new HybridVehicle(42, 4.3, 8.8, 22.0), "Prius" );
 
     //75 kWh, 16 kWh/100km
-//    delete testVehicle( new ElectricVehicle(75, 16), "Tesla 3");
+    delete testVehicle( new ElectricVehicle(75, 16), "Tesla 3");
 
     return 0;
 }
