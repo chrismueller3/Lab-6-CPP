@@ -17,7 +17,7 @@ float GasolineVehicle :: calculateRange() {
 }
 
 float GasolineVehicle :: percentEnergyRemaining() {
-    return currentGasoline/maximumGasoline;
+    return 100.0f * currentGasoline/maximumGasoline;
 }
 
 void GasolineVehicle :: drive(float km) {

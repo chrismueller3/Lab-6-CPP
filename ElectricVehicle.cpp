@@ -16,7 +16,7 @@ float ElectricVehicle :: calculateRange() {
 }
 
 float ElectricVehicle :: percentEnergyRemaining() {
-    return currentCharge/maximumCharge;
+    return 100.0f * currentCharge/maximumCharge;
 }
 
 void ElectricVehicle :: drive(float km) {
