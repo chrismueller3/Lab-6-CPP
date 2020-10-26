@@ -7,12 +7,13 @@
 
 #include "Vehicle.h"
 
-class GasolineVehicle : public Vehicle {
+class GasolineVehicle : virtual public Vehicle {
     float currentGasoline, maximumGasoline;
 public:
     virtual float calculateRange() override;
     virtual float percentEnergyRemaining() override;
     virtual void drive(float km) override;
     GasolineVehicle(float gasSize, float efficiency);
+    ~GasolineVehicle();
 };
 

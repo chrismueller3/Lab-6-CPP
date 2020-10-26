@@ -26,3 +26,7 @@ void GasolineVehicle :: drive(float km) {
         cout << "Your car is out of energy!";
     }
 }
+
+GasolineVehicle :: ~GasolineVehicle() {
+    cout << "In Gasoline Vehicle Destructor" << endl;
+}

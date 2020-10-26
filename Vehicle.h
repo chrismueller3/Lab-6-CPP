@@ -18,5 +18,6 @@ public:
 	virtual float percentEnergyRemaining() = 0;
 	virtual void drive(float km) = 0;
     float engineEfficiency;
+    virtual ~Vehicle();
 };
 

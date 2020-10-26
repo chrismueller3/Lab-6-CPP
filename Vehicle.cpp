@@ -65,3 +65,7 @@ using namespace std;
          return out;
      }
 
+     Vehicle :: ~Vehicle() {
+        cout << "In Vehicle Destructor" << endl;
+    }
+

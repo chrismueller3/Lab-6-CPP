@@ -5,9 +5,9 @@
 #include "ElectricVehicle.h"
 using namespace std;
 
-ElectricVehicle :: ElectricVehicle(float gasSize, float efficiency) : Vehicle() {
-    currentCharge=gasSize;
-    maximumCharge=gasSize;
+ElectricVehicle :: ElectricVehicle(float batterySize, float efficiency) : Vehicle() {
+    currentCharge=batterySize;
+    maximumCharge=batterySize;
     engineEfficiency=efficiency;
 }
 
@@ -24,4 +24,8 @@ void ElectricVehicle :: drive(float km) {
     if (currentCharge<=0) {
         cout << "Your car is out of energy!";
     }
+}
+
+ElectricVehicle :: ~ElectricVehicle() {
+    cout << "In Electric Vehicle Destructor" << endl;
 }
