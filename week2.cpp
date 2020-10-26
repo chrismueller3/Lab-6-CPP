@@ -3,34 +3,34 @@
 
 #include<iostream>
 #include "Vehicle.h"
+#include "GasolineVehicle.h"
+
 using namespace std;
 
 
-int main(int argc, char** argv)
+Vehicle* testVehicle(Vehicle *pVehicle, const char* vehicleName)
 {
-	Vehicle original;
-	Vehicle copy(original); // copy constructor by reference
+    cout << vehicleName << "’s range is: " << pVehicle->calculateRange() << endl;
+    pVehicle->drive(150); //drive 150 km
+    cout << vehicleName << "’s energy left is: " << pVehicle->percentEnergyRemaining() << endl;
+    cout << vehicleName << "’s range is now: " << pVehicle->calculateRange() << endl;
 
-	cout << "Original is: " << original << " copy is: " << copy << endl;
-
-	cout << "Increment original: " << original++ << endl;
-	cout << "Increment copy:" << ++copy << endl;
-
-	cout << "Decrement original:" << --original << endl;
-	cout << "Decrement copy:" << copy-- << endl;
-
-	// should be true :
-	cout << "Compare equality 1: " << (original == copy) << endl;
-
-	//should be false:
-	cout << "Compare equality 2: " << (--original == ++copy) << endl;
-
-	//should be true:
-	cout << "Compare inequality: " << (original != copy) << endl;
-
-	//This should make original = copy, and then return a Vehicle for output:
-	cout << "Assignment operator: " << (original = copy) << endl;
-	return 0;
+    return pVehicle;
 }
+
+int main(int argc, char **argv)
+{
+    //50L of gas, 7.1 L/100km
+    delete  testVehicle(new GasolineVehicle(50, 7.1), "Corolla");
+
+//42 L of gas, 4.3 L/100km, 8.8kWh, 22 kWh/100km
+//    delete testVehicle(  new HybridVehicle(42, 4.3, 8.8, 22.0), "Prius" );
+
+    //75 kWh, 16 kWh/100km
+//    delete testVehicle( new ElectricVehicle(75, 16), "Tesla 3");
+
+    return 0;
+}
+
 
 

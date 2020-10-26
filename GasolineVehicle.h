@@ -2,15 +2,17 @@
 // Created by Chris on 10/25/2020.
 //
 
-#ifndef LAB_5_GASOLINEVEHICLE_H
-#define LAB_5_GASOLINEVEHICLE_H
+#pragma once
 
 
 #include "Vehicle.h"
 
 class GasolineVehicle : public Vehicle {
-
+    float currentGasoline, maximumGasoline;
+public:
+    virtual float calculateRange() override;
+    virtual float percentEnergyRemaining() override;
+    virtual void drive(float km) override;
+    GasolineVehicle(float gasSize, float efficiency);
 };
 
-
-#endif //LAB_5_GASOLINEVEHICLE_H

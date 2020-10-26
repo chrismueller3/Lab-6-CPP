@@ -4,7 +4,6 @@
 
 #include "Vehicle.h"
 using namespace std;
-int numDoors, numWheels;
 
 
     Vehicle :: Vehicle(int w, int d) {
@@ -60,33 +59,33 @@ int numDoors, numWheels;
         }
     }
 
-    //For Vehicle++
-    Vehicle Vehicle :: operator++() {
-        numDoors++;
-        numWheels++;
-        return Vehicle(this);
-    }
-    //For ++Vehicle
-    Vehicle Vehicle :: operator++(int i) {
-        Vehicle temp(this);
-        numDoors++;
-        numWheels++;
-        return temp;
-    }
-
-    //For Vehicle--
-    Vehicle Vehicle :: operator--() {
-        numDoors--;
-        numWheels--;
-        return Vehicle(this);
-    }
-    //For --Vehicle
-    Vehicle Vehicle :: operator--(int i) {
-        Vehicle temp(this);
-        numDoors--;
-        numWheels--;
-        return temp;
-    }
+//    //For Vehicle++
+//    Vehicle Vehicle :: operator++() {
+//        numDoors++;
+//        numWheels++;
+//        return Vehicle(this);
+//    }
+//    //For ++Vehicle
+//    Vehicle Vehicle :: operator++(int i) {
+//        Vehicle temp(this);
+//        numDoors++;
+//        numWheels++;
+//        return temp;
+//    }
+//
+//    //For Vehicle--
+//    Vehicle Vehicle :: operator--() {
+//        numDoors--;
+//        numWheels--;
+//        return Vehicle(this);
+//    }
+//    //For --Vehicle
+//    Vehicle Vehicle :: operator--(int i) {
+//        Vehicle temp(this);
+//        numDoors--;
+//        numWheels--;
+//        return temp;
+//    }
 
    /* ostream& Vehicle :: operator<<(ostream& const out, const Vehicle& v) {
 
